@@ -1,0 +1,17 @@
+{
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/[...all]"
+    },
+    {
+      "source": "/file/(.*)",
+      "destination": "/api/[...all]"
+    },
+    {
+      "source": "/((?!api/|file/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
